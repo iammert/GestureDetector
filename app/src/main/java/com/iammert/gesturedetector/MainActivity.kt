@@ -2,17 +2,15 @@ package com.iammert.gesturedetector
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.MotionEvent
 import android.view.View
 import com.iammert.gesturedetectorlib.LongTouchGestureDetector
 
 class MainActivity : AppCompatActivity() {
 
-    private val longTouchGestureDetector = LongTouchGestureDetector(object : LongTouchGestureDetector.LongTouchListener {
+    val longTouchGestureDetector = LongTouchGestureDetector(object : LongTouchGestureDetector.LongTouchListener {
         override fun onLongTouchEvent(event: MotionEvent) {
-            // gets every touch events
-            Log.v("test", "Event!" + event.action)
+            // gets every touch events after a long press
         }
     })
 
